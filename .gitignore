@@ -1,0 +1,24 @@
+# Node dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build & deployment outputs
+dist/
+build/
+.vercel/
+
+# Runtime data
+data/
+*.tmp
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

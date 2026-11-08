@@ -1,0 +1,26 @@
+{
+  "name": "user-profile-card-generator-backend",
+  "version": "1.0.0",
+  "description": "Server-side form processing, string manipulation, and dynamic HTML profile card generator",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "profile-card",
+    "html-rendering",
+    "form-processing",
+    "string-manipulation",
+    "express",
+    "nodejs"
+  ],
+  "author": "lavach02-arch",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
