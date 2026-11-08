@@ -9,6 +9,8 @@ import {
   renderCardSvg,
 } from './controllers/profileController.js';
 
+import fs from 'fs';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -38,8 +40,10 @@ app.get('/cards/:id/embed', renderCardEmbed);
 app.get('/cards/:id/svg', renderCardSvg);
 app.get('/p/:id', renderCardPage);
 
-// Serve static frontend assets
-const publicPath = path.resolve(__dirname, '../../frontend/public');
+// Serve static frontend assets (supports root public or frontend/public)
+const rootPublicPath = path.resolve(__dirname, '../../public');
+const frontendPublicPath = path.resolve(__dirname, '../../frontend/public');
+const publicPath = fs.existsSync(rootPublicPath) ? rootPublicPath : frontendPublicPath;
 app.use(express.static(publicPath));
 
 // Fallback to index.html for client-side navigation
